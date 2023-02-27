@@ -1,4 +1,4 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
 #this code says hi at the couunt of 9
 count=1
 while [ $count -le 10 ]
