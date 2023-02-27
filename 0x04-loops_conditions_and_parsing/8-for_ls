@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
-#lists all the files present in a folder
 for file in *
 do
-  if [ "${file:0:1}" != "." ]; then
-    ls "$file"
+  # Check if the file is a hidden file
+  if [[ "${file}" != .* ]]
+  then
+    # Display the file or directory name
+    echo "${file}"
   fi
 done
+
