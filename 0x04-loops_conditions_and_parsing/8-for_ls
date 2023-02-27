@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Loop through each file and directory in the current directory
 for file in *
 do
   # Check if the file is a hidden file
@@ -8,4 +9,3 @@ do
     echo "${file}"
   fi
 done
-
