@@ -2,5 +2,5 @@
 #this code prints best school 10 times
 for _ in {1..10}
 do
-	echo "best school"
+	echo "Best School"
 done
