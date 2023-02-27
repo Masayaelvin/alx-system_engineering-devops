@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#the clock
 hour=0
 while [ $hour -le 1 ]
 do
