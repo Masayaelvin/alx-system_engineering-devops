@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Update package list
 # change listening port to 80 and output hello world in htm
 sudo apt update
