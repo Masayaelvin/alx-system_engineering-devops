@@ -4,5 +4,9 @@
 
 sudo apt update -y
 sudo apt install -y nginx
+<<<<<<< HEAD
 sudo sh -c "echo 'Hello World!' > /var/www/html/index.nginx-debian.html"
+=======
+sudo sh -c echo 'Hello World!' > /var/www/html/index.nginx-debian.html
+>>>>>>> 33b63ab066690d3abca8a2966e58dbd89fa6c76d
 sudo service nginx start
