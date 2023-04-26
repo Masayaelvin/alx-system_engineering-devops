@@ -1,34 +1,23 @@
 #!/usr/bin/env bash
-#install ngix and have a file that returns the string "Hello World  inside
 
-sudo apt-get update -y && \
-sudo apt-get install -y nginx
-if [ $? -eq 0 ]
-then
-    echo -e \
-"http {
-    root /var/www/school;
-    index index.html;
-    server {
-        listen 80;
-        location \ {
-		return 200 'Hello World!';
-        }
+# Update the package index
+apt-get update
+
+# Install nginx with the -y option to automatically answer yes to prompts
+apt-get install -y nginx
+
+# Create a backup of the default nginx configuration file
+cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
+
+# Modify the default configuration file to listen on port 80 and return "Hello World!"
+echo "
+server {
+    listen 80;
+    location / {
+        return 200 'Hello World!';
     }
-}
-events {
-}" > /etc/nginx/nginx.conf
-    mkdir -p /var/www/school
-    echo "Hello World!" > \
-	/var/www/school/index.html
-    service nginx start
-    if [ $? -ne 0 ]
-    then
-	"Problem starting nginx"
-	exit 1
-    fi
-else
-    echo "Could not install nginx"
-    exit 1
-fi
-exit 0
+}" > /etc/nginx/sites-available/default
+
+# Restart nginx
+kill $(cat /run/nginx.pid)
+
