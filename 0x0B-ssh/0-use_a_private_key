@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 #this script creates a connection to ubuntu server using the private key school
-ssh -i ~/.ssh/school ubuntu@54.144.22.150
+ssh -i ~/.ssh/school ubuntu@34.203.77.137
