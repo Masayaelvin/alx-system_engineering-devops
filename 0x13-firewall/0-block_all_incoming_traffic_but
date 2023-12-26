@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+sudo apt install ufw
+ufw default deny incoming
+ufw default allow outgoing
 ufw default allow 22
 ufw default allow 443
 ufw default allow 80
