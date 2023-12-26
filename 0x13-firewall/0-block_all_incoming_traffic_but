@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-sudo ufw default allow ssh
-sudo ufw default allow 443
-sudo ufw default allow 80
+ufw default allow 22
+ufw default allow 443
+ufw default allow 80
